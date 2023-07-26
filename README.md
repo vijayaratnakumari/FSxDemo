@@ -1,13 +1,13 @@
 # FSxDemo.
-# How to Create FSx Windows file server and connect to the Windows remote desktop server?
+How to Create an FSx Windows file server and connect to the Windows remote desktop server?
 
-# Step-by-step process. 
+Step-by-step process. 
 
 # AWS WorkSpaces and FSx File Server. 
 
 WorkSpaces: 
 
-Search in google: “AWS workspaces AD connector.”
+Search in Google: “AWS workspaces AD connector.”
 Select “Lunch a workSpace using AD connector- AWS workSpace” —--> Page opened. 
 Launch a workspace using an AD connector.
 
@@ -20,7 +20,7 @@ Amazon FSx:
 Under storage —-> FSx 
 FSx is also one of the storage services and this also looks like an EFS but EFS is not supported for Windows.
 Create file system: we have 4 types of file systems in the Amazon FSx.
-1.Amazon FSx for NetApp ONTAP
+1. Amazon FSx for NetApp ONTAP
 2. Amazon FSx for OpenZFS
 3. Amazon FSx for Windows File Server
 4.Amazon FSx for Lustre (Linux)
@@ -58,11 +58,11 @@ Next we need to Set up Directory Services with AWS Managed Microsoft AD in the A
 Connect to Remote Desktop connection and Microsoft Windows Instance by using Key Pair. 
 
 We have two ways to connect to a remote desktop.
-Select instance and click on CONNECT—-----> Click RDP client.
-1. Download  remote desktop file (RDP).
+Select the instance and click on CONNECT—-----> Click RDP client.
+1. Download the remote desktop file (RDP).
 2.  EC2 Instance Public IP Address and Username: Administrator.
- Remaining process is the same. 
-after downloading double click. Open one window asked Password. By using Key pair we can get the password and enter it and booting it happens then open Microsoft Windows server desktop. 
+ The remaining process is the same. 
+after downloading double click. Open one window asked the Password. By using Key pair we can get the password and enter it and booting it happens then open Microsoft Windows server desktop. 
 
 Open CMD (command prompt)
 Run this command: %SystemRoot%\system32\control.exe ncpa.cpl
@@ -71,12 +71,12 @@ Check your directory IP address matched with DNS server IP.
 Next
 Run this command: %SystemRoot%\system32\control.exe sysdm.cpl
 Check System properties. Provide Domain Name, Domain username, and password details. 
-After completing this process it’s asking to Restart now or later alert box. Restarting now is good.
+After completing this process it’s asking to Restart the now or later alert box. Restarting now is good.
 
 Now we need to Create Amazon FSx:
-Note: We have to  need the same VPC, default Security Groups, and Two Private Subnets, and Directory services (Windows authentication (AWS Managed Microsoft Active Directory)). 
+Note: We have to need the same VPC, default Security Groups, Two Private Subnets, and Directory services (Windows authentication (AWS Managed Microsoft Active Directory)). 
 By using these all we can create an Amazon FSx Windows File server.
 
-File System is available then copy the DNS name and paste it in (Windows Remote Desktop) windows File explorer. We have a Share folder in the aws Server by default. 
+File System is available then copy the DNS name and paste it into (Windows Remote Desktop) Windows File Explorer. We have a Share folder in the aws Server by default. 
 Goto start—-> search fsmgmt.msc—---> enter
-Open the shared folder window. Right Click on the share folder(local) —----> select connect to another computer —----> paste DNS name. Now we have to access aws server share folders, files in the Windows remote desktop.
+Open the shared folder window. Right Click on the shared folder(local) —----> select connect to another computer —----> paste the DNS name. Now we have to access aws server to share folders, and files in the Windows remote desktop.
