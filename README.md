@@ -30,28 +30,33 @@ Create file system: we have 4 types of file systems in the Amazon FSx.
 # Note: We have to need Directory Service While creating FSx and WorkSpaces also. 
 
 * What are AWS workSpaces and Pre-req for WorkSpaces?
+  
 We need an Active Directory to create users.
 We need to have a VPC with Multiple subnets.
-WorkSpaces Means: newly joined some employers in the company at that time, they have one Laptop but we need security for our company work so by using these workSpaces. 
+
+* WorkSpaces Means: newly joined some employers in the company at that time, they have one Laptop but we need security for our company work so by using these workSpaces.
+  
 BYOD: Bring your own Device.
 VMware: VDI-Virtual Desktop Infrastructure.
 Citrix: Xen Desktop.
 Desktop as a Service (DaaS)
 
-Creating a new VPC, Subnets, IGW, Routing table, and Security Groups.
-Setting up a Windows server and connecting Microsoft AD. 
-Understanding Directory service in the AWS.
-Installing an AD connection with the Active Directory.
-Create a workSpaces user and allocate a desktop.
+* Creating a new VPC, Subnets, IGW, Routing table, and Security Groups.
+* Setting up a Windows server and connecting Microsoft AD. 
+* Understanding Directory service in the AWS.
+* Installing an AD connection with the Active Directory.
+* Create a workSpaces user and allocate a desktop.
 
-What is an FSx File System?
+* What is an FSx File System?
+  
 Create an FSx file System and Mount it to workSpace Access the share folders and create the file, delete the lab.
 
-Demo: Using Amazon FSx for Windows File Server.
+* Demo: Using Amazon FSx for Windows File Server.
 
 # Create EC2 instance for Windows 2019 Base server (free trial).
+
 Attached are VPC, subnets, and Security groups.
-Note: Make sure you installed this in the Public subnets, and Security groups inbound rules added port no:3389 RDP anywhere, Key Pair is mainly important, attached to VPC to multiple subnets private and public subnets. 
+ **Note: Make sure you installed this in the Public subnets, and Security groups inbound rules added port no:3389 RDP anywhere, Key Pair is mainly important, attached to VPC to multiple subnets private and public subnets. **
 
 After successfully Launching AWS Microsoft windows server 2019 Base.
 
@@ -59,8 +64,10 @@ Next, we need to Set up Directory Services with AWS Managed Microsoft AD in the 
 
 Connect to Remote Desktop connection and Microsoft Windows Instance by using Key Pair. 
 
-We have two ways to connect to a remote desktop.
+* We have two ways to connect to a remote desktop.
+  
 Select the instance and click on CONNECT—-----> Click RDP client.
+
 1. Download the remote desktop file (RDP).
 2. EC2 Instance Public IP Address and Username: Administrator.
  The remaining process is the same. 
@@ -82,14 +89,18 @@ After completing this process it’s asking to Restart the now or later alert bo
 ![Screenshot 2023-07-27 142244](https://github.com/vijayaratnakumari/FSxDemo/assets/78976740/80592b7f-9a84-4a2b-8936-772429b2d21f)
 
 
-Now we need to Create Amazon FSx:
+* Now we need to Create Amazon FSx:
 # Note: 
 We have to need the same VPC, default Security Groups, Two Private Subnets, and Directory services (Windows authentication (AWS Managed Microsoft Active Directory)). 
+
 By using these all we can create an Amazon FSx Windows File server.
 
-File System is available then copy the DNS name and paste it into (Windows Remote Desktop) Windows File Explorer. We have a Share folder in the aws Server by default. 
-Goto start—-> search fsmgmt.msc—---> enter
+* File System is available then copy the DNS name and paste it into (Windows Remote Desktop) Windows File Explorer. We have a Share folder in the aws Server by default.
+  
+Goto start—-> search fsmgmt.msc—---> enter.
+
 Open the shared folder window. Right Click on the shared folder(local) —----> select connect to another computer —----> paste the DNS name. Now we have to access aws server to share folders, and files in the Windows remote desktop.
+
 
 ![1690389210044](https://github.com/vijayaratnakumari/FSxDemo/assets/78976740/27f11cdb-b58b-446c-b72c-c7bf7fd37ee9)
 ![1690389210030](https://github.com/vijayaratnakumari/FSxDemo/assets/78976740/ff3f04fd-1757-4f7c-a67e-1462d5ce59cd)
