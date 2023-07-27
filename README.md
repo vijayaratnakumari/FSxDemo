@@ -67,11 +67,14 @@ Select the instance and click on CONNECT—-----> Click RDP client.
 after downloading double click. Open one window asked the Password. By using Key pair we can get the password and enter it and booting it happens then open Microsoft Windows server desktop. 
 
 Open CMD (command prompt)
-Run this command: > # %SystemRoot%\system32\control.exe ncpa.cpl
+# Run this command:  %SystemRoot%\system32\control.exe ncpa.cpl
+
 Setup Ethernet —-> Internet protocol Version4 (IPV4)
 Check your directory IP address matched with DNS server IP.
-Next
-Run this command: # %SystemRoot%\system32\control.exe sysdm.cpl
+Next.
+
+# Run this command: %SystemRoot%\system32\control.exe sysdm.cpl
+
 Check System properties. Provide Domain Name, Domain username, and password details. 
 After completing this process it’s asking to Restart the now or later alert box. Restarting now is good.
 
