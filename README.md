@@ -101,6 +101,4 @@ Goto start—-> search fsmgmt.msc—---> enter.
 
 Open the shared folder window. Right Click on the shared folder(local) —----> select connect to another computer —----> paste the DNS name. Now we have to access aws server to share folders, and files in the Windows remote desktop.
 
-
-![1690389210044](https://github.com/vijayaratnakumari/FSxDemo/assets/78976740/27f11cdb-b58b-446c-b72c-c7bf7fd37ee9)
-![1690389210030](https://github.com/vijayaratnakumari/FSxDemo/assets/78976740/ff3f04fd-1757-4f7c-a67e-1462d5ce59cd)
+![Screenshot 2023-08-07 222248](https://github.com/vijayaratnakumari/FSxDemo/assets/78976740/20944f29-23c8-4be7-a163-d068941ae8e8)
